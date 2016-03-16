@@ -7,7 +7,8 @@ namespace Knight_Jeffrey_BuildingCodeRepository
 		public static void Main (string[] args)
 		{
 			//SwapName ();
-			BackWards ();
+			//BackWards ();
+			AgeConvert ();
 		}
 
 		//exercise1//
@@ -53,6 +54,32 @@ namespace Knight_Jeffrey_BuildingCodeRepository
 		}
 		//exercise2//
 
+		//exercise3//
+		public static void AgeConvert()
+		{
+			//varaibles
+			string name="";
+			double age = 0.0;
+			double days = 0.0;
+			double hours = 0.0;
+			double minutes = 0.0;
+			double seconds = 0.0;
 
+			Console.WriteLine ("Enter your name.");
+			name = Console.ReadLine ();
+			Console.WriteLine ("Enter your age.");
+			age = Convert.ToInt32 (Console.ReadLine ());
+
+			days = age * 365 + (age / 4);
+			hours = days * 24;
+			minutes = hours * 60;
+			seconds = minutes * 60;
+
+			Console.WriteLine ("{0} has been alive for {1} days\nor {2} hours\nor {3} minutes\nor {4} seconds.",name,days,hours,minutes,seconds);
+
+
+
+		}
+		//exercise3//
 	}
 }
