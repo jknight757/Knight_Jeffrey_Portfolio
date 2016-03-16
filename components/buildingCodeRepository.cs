@@ -59,11 +59,11 @@ namespace Knight_Jeffrey_BuildingCodeRepository
 		{
 			//varaibles
 			string name="";
-			double age = 0.0;
-			double days = 0.0;
-			double hours = 0.0;
-			double minutes = 0.0;
-			double seconds = 0.0;
+			int age = 0;
+			int days = 0;
+			int hours = 0;
+			int minutes = 0;
+			int seconds = 0;
 
 			Console.WriteLine ("Enter your name.");
 			name = Console.ReadLine ();
