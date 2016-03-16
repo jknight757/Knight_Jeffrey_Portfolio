@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Knight_Jeffrey_BuildingCodeRepository
 {
@@ -6,10 +7,49 @@ namespace Knight_Jeffrey_BuildingCodeRepository
 	{
 		public static void Main (string[] args)
 		{
-			//SwapName ();
-			//BackWards ();
-			//AgeConvert ();
-			TempConvert();
+			//varaibles
+			string methodName="";
+			ArrayList methodNames = new ArrayList();
+			methodNames.Add ("SWAPNAME");
+			methodNames.Add("BACKWARDS");
+			methodNames.Add ("AGECONVERT");
+			methodNames.Add("TEMPCONVERT");
+
+			//input
+			Console.WriteLine ("Which method would you like to run.");
+			Console.WriteLine ("SwapName----BackWards----AgeConvert----TempConvert");
+			methodName = Console.ReadLine ();
+			methodName = methodName.ToUpper ();
+
+			//input validation
+			while (methodNames.Contains (methodName) == false) 
+			{
+				Console.WriteLine ("Invalid entry, enter a new method name");
+				Console.WriteLine ("SwapName----BackWards----AgeConvert----TempConvert");
+				methodName = Console.ReadLine ();
+				methodName = methodName.ToUpper ();
+			}
+
+				//input to method call
+				switch (methodName) 
+				{
+				case "SWAPNAME":
+					SwapName ();
+					break;
+				case "BACKWARDS":
+					BackWards ();
+					break;
+				case "AGECONVERT":
+					AgeConvert ();
+					break;
+				case "TEMPCONVERT":
+					TempConvert ();
+					break;
+				}
+			
+
+
+
 		}
 
 		//exercise1//
