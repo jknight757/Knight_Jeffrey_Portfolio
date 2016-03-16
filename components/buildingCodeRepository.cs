@@ -8,7 +8,8 @@ namespace Knight_Jeffrey_BuildingCodeRepository
 		{
 			//SwapName ();
 			//BackWards ();
-			AgeConvert ();
+			//AgeConvert ();
+			TempConvert();
 		}
 
 		//exercise1//
@@ -81,5 +82,32 @@ namespace Knight_Jeffrey_BuildingCodeRepository
 
 		}
 		//exercise3//
+
+		//exercise4//
+		public static void TempConvert()
+		{
+			//varaibles
+			double fTemp = 0.0;
+			double cTemp = 0.0;
+			double fInput = 0.0;
+			double cInput = 0.0;
+
+			//input
+			Console.WriteLine ("Enter the current temperature in fahrenheit");
+			fInput = Convert.ToDouble (Console.ReadLine ());
+
+			//math
+			cTemp= (fInput -32)*5/9;
+			Console.WriteLine ("The current temperature is {0}F or {1}C",fInput,cTemp);
+
+			Console.WriteLine ("Enter the current temperature in celsius");
+			cInput = Convert.ToDouble (Console.ReadLine ());
+
+			fTemp = (cInput * 9 / 5) + 32;
+			Console.WriteLine ("The current temperature is {0}C or {1}F",cInput,fTemp);
+
+
+		}
+		//exercise4//
 	}
 }
